@@ -10,10 +10,132 @@
     <link rel="stylesheet" href="assets/styles/main.min.css">
 </head>
 <body>
+
+	<header class="header">
+		<div class="bg_header">
+			<div class="wrapper">
+				<div class="top_header">
+					<div class="logo">
+						<a href="#">
+							<img src="assets/images/logo.png" alt="Logo">
+						</a>
+					</div>
+					<div class="addres">
+						<div class="city">
+							<span>Москва</span>
+						</div>
+						<div class="phone">
+							<a href="tel:+78005623452"><i class="fas fa-phone-alt"></i> +7 800-562-3452</a>
+						</div>
+					</div>
+					<nav class="nav">
+						<ul>
+							<li><a href="#">О проекте</a></li>
+							<li><a href="#">Онлайн-курсы</a></li>
+							<li><a href="#">Статьи</a></li>
+						</ul>
+					</nav>
+					<div class="teach">
+						<a href="#">Преподователям</a>
+					</div>
+					<div class="check_in">
+						<a href="#" class="check">Регистрация</a>
+						<a href="#" class="sign_in">Вход</a>
+					</div>
+					<div class="nav_btn_mobile">
+						<span class="one"></span>
+						<span class="two"></span>
+						<span class="three"></span>
+					</div>
+					
+					<div class="nav_mobile">
+						<div class="logo_mob">
+							<a href="#">
+								<img src="assets/images/logo.png" alt="Logo">
+							</a>
+						</div>
+						<nav class="nav_mob">
+							<ul>
+								<li><a href="#">О проекте</a></li>
+								<li><a href="#">Онлайн-курсы</a></li>
+								<li><a href="#">Статьи</a></li>
+							</ul>
+						</nav>
+						<div class="check_in_mob">
+							<a href="#" class="check">Регистрация</a>
+							<a href="#" class="sign_in">Вход</a>
+						</div>
+						<div class="teach_mob">
+							<a href="#">Преподователям</a>
+						</div>
+					</div>
+				</div>
+				<div class="info_header">
+					<h1 class="title"><span>Первая</span> образовательная онлайн-платформа, созданная преподами!</h1>
+					<div class="sub_title">
+						<p>Описание уникального торгового предложения или же описание названия того или иного продукта, который на первом экран</p>
+						<a href="#" class="registr">Зарегистрироваться</a>
+					</div>
+				</div>
+				<div class="bottom_box">
+					<img src="assets/images/mous.png" alt="Mous">
+					<span>Подробнее ниже</span>
+				</div>
+			</div>
+		</div>	
+	</header>
+	<section class="choose">
+		<div class="wrapper">
+			<span class="quantity">199 преподавателей уже работает на сайте</span>
+			<h2 class="title">Выбери свою программу</h2>
+			<div class="line_content line_content_mobile">
+				<div class="line">
+					<img src="assets/images/img1.jpg" alt="#">
+					<div class="open_program">
+						<a href="#">Школьная <br> программа</a>
+					</div>
+					<div class="close_program">
+						<a href="#">Подробнее о <br> программе</a>
+					</div>
+				</div>
+				<div class="line">
+					<img src="assets/images/img2.jpg" alt="#">
+					<div class="open_program">
+						<a href="#">Студенческая <br> программа</a>
+					</div>
+					<div class="close_program">
+						<a href="#">Подробнее о <br> программе</a>
+					</div>
+				</div>
+				<div class="line">
+					<img src="assets/images/img3.jpg" alt="#">
+					<div class="open_program">
+						<a href="#">Дополнительное <br> образование</a>
+					</div>
+					<div class="close_program">
+						<a href="#">Подробнее об <br> образовании</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
   
 
 
 	<script src="assets/scripts/vendors.bundle.js"></script>
 	<script src="assets/scripts/works.bundle.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			'use strict';
+
+			/* other */
+			$('.nav_btn').click(function(){
+			   $('.nav_btn').toggleClass('nav-active');
+				$('.check_in').toggleClass('check-active');
+			});
+
+		});
+	</script>
 </body>
 </html>

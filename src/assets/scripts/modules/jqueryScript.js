@@ -4,60 +4,35 @@ var $ = require("jquery");
 $(document).ready(function(){
 	'use strict';
 
-if ($('.header_slider').length) {
-		$('.header_slider').slick({
-	   	arrows: false,
-	   	dots: true
-	   });
-	}
-
 	/* other */
-	$('.nav_btn').click(function(){
-		$('.nav_btn').toggleClass('nav-active');
-		$('.site_nav').toggleClass('side-active');
+	$('.nav_btn_mobile').click(function(){
+	   $('.nav_btn_mobile').toggleClass('nav-active');
+		$('.nav_mobile').toggleClass('nav-active_mobile');
+		$('.check_in').toggleClass('check-active');
 	});
 
-	//project block slider
-	if ($('.project_slider').length) {
-		$('.project_slider').slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			arrows: false,
-			fade: true,
-			asNavFor: '.project_slider_nav'
-		});
-		$('.project_slider_nav').slick({
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			asNavFor: '.project_slider',
-			dots: false,
-			arrows: false,
-			//centerMode: false,
-			focusOnSelect: true
-		});
+if ($('.line_content_mobile').length) {
+			if($('body').innerWidth() < 480){
+		     $('.line_content_mobile').slick({
+			  centerMode: true,
+			  centerPadding: '15px',
+			  slidesToShow: 1,
+			  arrows: false
+			});
+			$('.line_content').addClass('line_content_mobile');
 
-		$('.project_slider_nav').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-		  var tabs_container = $('.project_tab_container');
-
-		  tabs_container.find($('.tab-item')).hide();
-		  tabs_container.find($('.tab-' + nextSlide)).show();
-		});
+	    }
+	    else{
+	     
+			$('.line_content').revomeClass('line_content_mobile');
+	    }
+		
 	}
 
-	$('.popup-btn').on('click', function(event) {
-		event.preventDefault();
-		$('.popup').fadeIn(400);
-	});
-	$('.popup-close').on('click', function(event) {
-		event.preventDefault();
-		$('.popup').fadeOut(400);
-	});
+	
+
+
+
+
 
 });
-
-/*$('.testimonials_carousel').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-var tabs_container = $('.testimonial_tab_container');
-
-tabs_container.find($('.tab-item')).hide();
-tabs_container.find($('.tab-' + nextSlide)).show();
-});*/
