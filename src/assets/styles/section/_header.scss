@@ -303,7 +303,7 @@
 	}
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1280px) {
 	.wrapper {
 		max-width: 952px;
 	}
@@ -313,7 +313,7 @@
 				position: relative;
 				padding-bottom: 120px;
 
-				.nav_btn, .nav_btn_mobile {
+				.nav_btn_mobile {
 					cursor: pointer;
 					transition: all 0.3s;
 					z-index: 90;
@@ -349,9 +349,6 @@
 				}
 				.nav_btn_mobile {
 					display: flex;
-				}
-				.nav_btn {
-					display: none;
 				}
 				.addres {
 					.city {
@@ -472,7 +469,7 @@
 	}
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
 	.wrapper {
 		max-width: 300px;
 	}
